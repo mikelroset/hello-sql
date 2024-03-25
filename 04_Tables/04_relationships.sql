@@ -53,6 +53,7 @@ CREATE TABLE languages(
 -- El campo user_id y language_id de la tabla intermedia "users_languages" es clave foránea de las
 -- claves primarias user_id de la tabla "users" y de language_id de la tabla "languages"
 -- Un usuario puede conoces muchos lenguajes. Un lenguaje puede ser conocido por muchos usuarios.
+-- Añadimos el constraint UNIQUE (user_id, language_id) para evitar que se repitan las tuplas usuario-lenguaje.
 CREATE TABLE users_languages(
 	users_language_id int AUTO_INCREMENT PRIMARY KEY,
     user_id int,
@@ -66,6 +67,10 @@ CREATE TABLE users_languages(
 Relación de Auto-Referencia
 Relación que indica que un un registro en la tabla A puede 
 relacionarse con otro registro de la tabla A.
+Por ejemplo teniendo en la misma tabla un campo "jefe_id"
+que haga referencia a un id de user que represente el jefe
+del usuario. Si el usuario no tiene jefe, podría quedarse en 
+NULL.
 */
 
 /*

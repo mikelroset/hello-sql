@@ -8,6 +8,7 @@ CREATE TABLE `hello_mysql`.`email_history` (
 `email_history_id` INT NOT NULL AUTO_INCREMENT,
 `user_id` INT NOT NULL,
 `email` VARCHAR(100) NULL,
+`created_at` DATETIME,
 PRIMARY KEY (`email_history_id`),
 UNIQUE INDEX `email_history_id_UNIQUE` (`email_history_id` ASC) VISIBLE);
 
@@ -29,7 +30,7 @@ BEGIN
 END//
 
 -- Actualiza el campo "email" del usuario 1 la tabla "users" para probar el trigger
-UPDATE users SET email = 'mouredev@gmail.com' WHERE user_id = 1
+UPDATE users SET email = 'mouredev@gmail.com' WHERE user_id = 1;
 
 -- Elimina el trigger llamado "tg_email"
 DROP TRIGGER tg_email;

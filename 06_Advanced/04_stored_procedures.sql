@@ -2,6 +2,26 @@
 STORED PROCEDURES
 Lección 18.4: https://youtu.be/OuJerKzV5T0?t=20033
 */
+/*
+Es como una query que guardamos en favoritos. Los parámetros que le pasemos a la stored procedure no puede llamarse igual que un campo de la tabla.
+
+Ejemplo:
+
+DELIMITER //
+
+CREATE PROCEDURE nombre_procedimiento (
+    IN parametro1 tipo_de_dato,
+    IN parametro2 tipo_de_dato
+)
+BEGIN
+    -- Cuerpo del procedimiento almacenado aquí
+    -- Puedes utilizar los parámetros como variables en las instrucciones SQL dentro del procedimiento.
+    -- Ejemplo:
+    SELECT * FROM tabla WHERE columna1 = parametro1 AND columna2 = parametro2;
+END //
+
+DELIMITER ;
+*/
 
 -- Crea un procedimiento almacenado llamado "p_all_users" que obtiene todos los datos de "users"
 DELIMITER //

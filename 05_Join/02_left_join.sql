@@ -1,6 +1,7 @@
 /*
 LEFT JOIN
 Lección 17.2: https://youtu.be/OuJerKzV5T0?t=17045
+Obtenemos los datos de la tabla de la izquierda más las conicidencias con la tabla de la derecha.
 */
 
 -- Obtiene los datos de todos los usuarios junto a su dni (lo tenga o no)

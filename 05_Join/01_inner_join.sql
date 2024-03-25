@@ -1,8 +1,10 @@
 /*
 INNER JOIN (JOIN)
 Lección 17.1: https://youtu.be/OuJerKzV5T0?t=16101
+Obtenemos los datos comunes entre 2 tablas.
 */
 
+-- RELACIÓN 1:1
 -- Realiza un JOIN de manera incorrecta, ya que no existe un campo de relación
 SELECT * FROM users
 INNER JOIN dni;
@@ -23,6 +25,7 @@ JOIN dni
 ON users.user_id = dni.user_id
 ORDER BY age ASC;
 
+-- RELACIÓN 1:N
 -- Obtiene los datos de los usuarios que tienen empresa
 SELECT * FROM users
 JOIN companies
@@ -38,6 +41,7 @@ SELECT companies.name, users.name FROM companies
 JOIN users
 ON companies.company_id = users.company_id;
 
+-- RELACIÓN N:M
 -- Obtiene los nombres de usuarios junto a los lenguajes que conocen
 SELECT users.name, languages.name
 FROM users_languages
